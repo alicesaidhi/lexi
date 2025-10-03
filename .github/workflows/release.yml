@@ -3,6 +3,9 @@ name: Build Release Executables
 on:
     release
 
+permissions:
+    contents: write
+
 jobs:
     build:
         runs-on: ubuntu-latest
