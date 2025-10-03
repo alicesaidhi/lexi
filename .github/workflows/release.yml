@@ -39,17 +39,17 @@ jobs:
                 lune build bundle/init.luau -o ./lexi-aarch64-linux -t linux-aarch64
             - name: Compress
               run:
-                tar -czf lexi-x86_64-windows.tar.gz ./lexi-x86_64-windows.exe;
-                tar -czf lexi-aarch64-windows.tar.gz ./lexi-aarch64-windows.exe;
-                tar -czf lexi-x86_64-macos.tar.gz ./lexi-x86_64-macos.exe;
-                tar -czf lexi-aarch64-macos.tar.gz ./lexi-aarch64-macos.exe;
-                tar -czf lexi-x86_64-linux.tar.gz ./lexi-x86_64-linux;
-                tar -czf lexi-aarch64-linux.tar.gz ./lexi-aarch64-linux
+                tar -czf ./lexi-x86_64-windows.tar.gz ./lexi-x86_64-windows.exe;
+                tar -czf ./lexi-aarch64-windows.tar.gz ./lexi-aarch64-windows.exe;
+                tar -czf ./lexi-x86_64-macos.tar.gz ./lexi-x86_64-macos.exe;
+                tar -czf ./lexi-aarch64-macos.tar.gz ./lexi-aarch64-macos.exe;
+                tar -czf ./lexi-x86_64-linux.tar.gz ./lexi-x86_64-linux;
+                tar -czf ./lexi-aarch64-linux.tar.gz ./lexi-aarch64-linux
             - name: Release files
               run:
-                gh release upload ${{github.event.release.tag_name}} ./lexi-windows-x86_64.tar.gz;
-                gh release upload ${{github.event.release.tag_name}} ./lexi-windows-aarch64.tar.gz;
-                gh release upload ${{github.event.release.tag_name}} ./lexi-macos-x86_64.tar.gz;
-                gh release upload ${{github.event.release.tag_name}} ./lexi-macos-aarch64.tar.gz;
-                gh release upload ${{github.event.release.tag_name}} ./lexi-linux-x86_64.tar.gz;
-                gh release upload ${{github.event.release.tag_name}} ./lexi-linux-aarch64.tar.gz
+                gh release upload ${{github.event.release.tag_name}} ./lexi-x86_64-windows.tar.gz;
+                gh release upload ${{github.event.release.tag_name}} ./lexi-aarch64-windows.tar.gz;
+                gh release upload ${{github.event.release.tag_name}} ./lexi-x86_64-macos.tar.gz;
+                gh release upload ${{github.event.release.tag_name}} ./lexi-aarch64-macos.tar.gz;
+                gh release upload ${{github.event.release.tag_name}} ./lexi-x86_64-linux.tar.gz;
+                gh release upload ${{github.event.release.tag_name}} ./lexi-aarch64-linux.tar.gz
