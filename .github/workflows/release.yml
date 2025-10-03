@@ -27,6 +27,7 @@ jobs:
                 pesde x pesde/darklua -- process pkgs/bin/src bundle
             - name: Lune Build
               run:
+                mkdir releases;
                 lune build bundle/init.luau -o releases/lexi-windows-x86_64 -t windows-x86_64;
                 lune build bundle/init.luau -o releases/lexi-windows-aarch64 -t windows-aarch64;
                 lune build bundle/init.luau -o releases/lexi-macos-x86_64 -t windows-x86_64;
