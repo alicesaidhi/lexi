@@ -5,3 +5,4 @@
 
 [tools]
 lune = "lune-org/lune@0.10.2"
+lexi = "alicesaidhi/lexi@0.0.7"
